@@ -33,7 +33,7 @@ body::before{
 }
 
 .page {
-  width: 73.6rem;
+  max-width: 73.6rem;
   margin: 0 auto;
 }
 
@@ -167,6 +167,7 @@ fieldset legend{
 
 .checkbox-wrapper label{
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 1.6rem;
 
@@ -235,10 +236,30 @@ footer .button:hover{
   background-color: #08A04C;
 }
 
-input:invalid{
+/*input:invalid{
   border: 1px solid #FF1010;
 }
-
+*/
 @media (max-width: 720px){
+  body .page{
+    padding-inline: 1rem;
+  }
 
+  body form label{
+    display: flex;
+    flex-direction: column;
+  }
+  body .input-wrapper label span{
+    margin: 0;
+  }
+
+  main form{
+    padding-inline: 2rem;
+  }
+  .fieldset-wrapper .col-3{
+    flex-direction: column;
+  }
+  body footer{
+    padding-inline: 2rem;
+  }
 }
